@@ -60,9 +60,6 @@ bst * del(bst*node,int d){
         node->right=del(node->right,t->data);
         
     }
-   // else
-     //   printf("\n Node not found");
-    
     return node;
 }
 
