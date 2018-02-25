@@ -1,0 +1,14 @@
+void pre(bst *node){
+    if(node){
+        printf(" %d ",node->data);
+        pre(node->left);
+        pre(node->right);
+    }
+}
+void post(bst *node){
+    if(node){
+        post(node->left);
+        post(node->right);
+        printf(" %d ",node->data);
+    }
+}
