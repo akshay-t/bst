@@ -15,7 +15,7 @@ typedef struct que{
 }que;
 struct que *front=NULL,*rear=NULL;
 
-
+//indet node in tree
 bst * insert(bst *node,int d){
     if(!node){
         node=malloc(sizeof(bst));
@@ -55,8 +55,6 @@ void post(bst *node){
 }
 
 void enque(bst *node){
-    
-    
     if(rear){
         que *temp=malloc(sizeof(que));
         temp->node=node;
@@ -92,7 +90,7 @@ void bfs(bst *node){
         
 
         //break;
-       if(front)
+       if(front) //checking if queue empty
             node=deque();
         else    
             break;
