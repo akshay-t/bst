@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+
+int search(int a[9],int d){
+    int lo=0,hi=8;
+    while(lo<hi){
+        int m=(lo+hi)/2;
+        if(a[m]>a[hi])
+            lo=m+1;
+        else
+            hi=m-1;
+    }
+    int ro=lo;
+    lo=0,hi=8;
+    while(lo<=hi){
+        int m=(lo+hi)/2;
+        int rm=(m+ro)%8;
+        if(a[rm]==d)
+            return rm;
+        if(a[rm]<d)
+            lo=m+1;
+        else
+            hi=m-1;
+        
+    }
+}
+int main()
+{
+    int a[] = {6,8,12,16,18,20,1, 3, 5};
+    int l=search(a,20);
+    printf("%d", l);
+    return 0;
+}
