@@ -3,14 +3,14 @@
 
 int search(int a[9],int d){
     int lo=0,hi=8;
-    while(lo<hi){
+    while(lo<hi){//find lowest element
         int m=(lo+hi)/2;
         if(a[m]>a[hi])
             lo=m+1;
         else
             hi=m-1;
     }
-    int ro=lo;
+    int ro=lo;// lowest element which is rotation count
     lo=0,hi=8;
     while(lo<=hi){
         int m=(lo+hi)/2;
