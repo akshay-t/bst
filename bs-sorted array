@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int s(int a[9],int st,int e,int d){
+    int m=(st+e)/2;
+    if(a[m]==d)
+        return (m) ;
+    if(a[m]>d)
+        s(a,st,m-1,d);
+    else
+        s(a,m+1,e,d);
+}
+
+int search(int a[9],int d){
+    
+    return(s(a,0,8,d));
+}
+int main()
+{
+    int a[] = {1, 3, 5, 6,8,12,16,18,20};
+    int l=search(a,6);
+    printf("%d", l);
+    return 0;
+}
